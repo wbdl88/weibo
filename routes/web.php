@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //注册页面
+Route::resource('users', 'UsersController');
 Route::get('signup', 'UsersController@create')->name('signup');
 
 //静态页面
