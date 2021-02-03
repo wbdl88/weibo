@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//忘记密码与找回密码路由
+Route::get('password/reset', 'PasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'PasswordController@sendResetLinkEmail')->name('password.email');
+
+Route::get('password/reset/{token}', 'PasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'PasswordController@reset')->name('password.update');
+
 //发送email路由
 Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
 
