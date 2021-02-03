@@ -20,11 +20,11 @@
                     </div>
                     <div class="form-group">
                         <label for="password">密码：</label>
-                        <input type="text" class="form-control" name="password" value="{{old('password')}}">
+                        <input type="password" class="form-control" name="password" value="{{old('password')}}">
                     </div>
                     <div class="form-group">
                         <label for="password_confirmation">确认密码：</label>
-                        <input type="text" class="form-control" name="password_confirmation" value="{{old('password_confirmation')}}">
+                        <input type="password" class="form-control" name="password_confirmation" value="{{old('password_confirmation')}}">
                     </div>
 
                     <button class="btn btn-primary" type="submit">注册</button>
