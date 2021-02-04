@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// 发布微博
+Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
+
 //忘记密码与找回密码路由
 Route::get('password/reset', 'PasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password/email', 'PasswordController@sendResetLinkEmail')->name('password.email');
